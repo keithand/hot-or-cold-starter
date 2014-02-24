@@ -29,7 +29,6 @@ $(document).ready(function(){
 
       /------FUNCTION FOR STARTING A NEW GAME------/
   	function newGame () {
-  		event.preventDefault();
   		randomNumber = Math.floor((Math.random()* 100) + 1);
       numberGuess = 0;
       answers.length = 0;
@@ -39,6 +38,7 @@ $(document).ready(function(){
      $('#userGuess').removeAttr('disabled');
      $('#guessButton').removeAttr('disabled');
      $('.game h2').css('background-color', '#cc324b');
+     $('ul#guessList > li').remove();
     
      };
 
